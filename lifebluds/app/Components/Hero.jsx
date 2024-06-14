@@ -13,17 +13,17 @@ const HeroSection = () => {
   return (
     <>
       {showCardComponent ? (
-        <div className="flex items-center justify-center h-full lg:h-[fit-content] w-full lg:w-1/2 py-10 lg:py-20 px-4" style={{ backgroundImage: "url('../hero-img.png')", backgroundRepeat: 'no-repeat', backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="flex items-center justify-center h-full lg:h-[fit-content] w-full lg:w-1/2 py-10 lg:py-20 px-4 blur-background" style={{ backgroundImage: "url('../hero-img.png')", backgroundRepeat: 'no-repeat', backgroundSize: "cover", backgroundPosition: "center" }}>
           <div className="transparent-card  bg-red-800 shadow-md  bg-opacity-35 py-10 lg:py-8 px-4 text-white">
-            <h6 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight md:leading-snug lg:leading-tight font-gilroy-bold">
+            <h6 className="text-3xl md:text-3xl lg:text-4xl font-bold leading-tight md:leading-snug lg:leading-tight font-gilroy-bold">
               Save Lives with a Single Donation
             </h6>
-            <p className="text-sm md:text-base leading-tight md:leading-normal py-4 font-helvetica">
+            <p className="text-lg md:text-base leading-tight md:leading-normal py-4 font-helvetica">
               Your blood donation can save up to three lives. Join our community of lifesavers and make a difference today.
             </p>
             <hr className="border-gray-300 mb-8 h-1 my-5 bg-gray-300" />
             <div>
-              <h2 className="text-lg md:text-xl lg:text-2xl font-bold leading-tight md:leading-snug lg:leading-tight">
+              <h2 className="text-2xl md:text-xl lg:text-2xl font-bold leading-tight md:leading-snug lg:leading-tight">
                 Why Donate Blood?
               </h2>
               {BloodDonationServices.map((item, index) => (

@@ -21,6 +21,16 @@ html, body {
     }
 
     .transparent-card{
-        @apply  w-full lg:w-[430px] h-[fit-content] px-[40px] py-[32px] sm:my-[60px] md:my-4 lg:my-auto  shadow-md bg-transparent top-[156px];
+        @apply bg-none my-[50px] w-full lg:w-[430px] h-[fit-content] px-[40px] py-[32px] sm:my-[60px] md:my-4 lg:my-auto  shadow-md bg-transparent top-[156px];
     }
+    
+.blur-background::before {
+  content: '';
+  position: absolute;
+  inset: 1;
+  backdrop-filter: blur(40px); /* Adjust the blur intensity */
+  -webkit-backdrop-filter: blur(40px); /* For Safari support */
+  z-index: -1;
+}
+
   }
