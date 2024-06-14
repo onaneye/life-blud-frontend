@@ -1,5 +1,3 @@
-
-
 const Navbar = () => {
   return (
     <div className='container px-4 mx-4 items-center py-5 my-0 flex justify-between absolute'>

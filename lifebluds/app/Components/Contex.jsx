@@ -1,3 +1,5 @@
+// file: src/contexts/Contex.js
+
 import React, { createContext, useContext, useState } from 'react';
 
 const ToggleBorderContext = createContext();
@@ -5,19 +7,14 @@ const ToggleBorderContext = createContext();
 export const useToggleBorder = () => useContext(ToggleBorderContext);
 
 export const ToggleBorderProvider = ({ children }) => {
-  const [activeCards, setActiveCards] = useState(null);
+  const [activeCard, setActiveCard] = useState(null);
 
   const toggleCard = (index) => {
-    // if (activeCards.includes(index)) {
-    //   setActiveCards(activeCards.filter((item) => item !== index));
-    // } else {
-    //   setActiveCards([...activeCards, index]);
-    // }
-    setActiveCards(index)
+    setActiveCard(activeCard === index ? null : index);
   };
 
   return (
-    <ToggleBorderContext.Provider value={{ activeCards, toggleCard }}>
+    <ToggleBorderContext.Provider value={{ activeCard, toggleCard }}>
       {children}
     </ToggleBorderContext.Provider>
   );
