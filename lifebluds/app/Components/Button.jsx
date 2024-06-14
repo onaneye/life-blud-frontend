@@ -1,14 +1,36 @@
 // file: src/components/Button.jsx
-
+'use client'
+import React from "react";
 import Link from "next/link";
-import { useToggleBorder } from './Contex';
+import { useRouter } from "next/navigation";
+import { useToggleBorder } from './Contex'; // Adjust path as needed
 
 const Button = () => {
-  const { activeCard } = useToggleBorder();
+  const router = useRouter();
+  const { activeCard, cardValue } = useToggleBorder();
+
+  const handleSignUp = () => {
+    // Handle sign up logic based on cardValue
+    switch (cardValue) {
+      case 'Medical Facility':
+        router.push('medical-facility-registration');
+        break;
+      case 'Blood Donor':
+        router.push('blood-donor-registration');
+        break;
+      default:
+        console.log('Please select an option.');
+        break;
+    }
+  };
 
   return (
     <div className="my-5 mx-1 w-full">
-      <button className={`button-secondary-lg ${activeCard !== null ? 'bg-red-800' : 'disabled'}`}>
+      <button 
+        className={`button-secondary-lg ${activeCard !== null ? 'bg-red-800' : 'disabled'}`} 
+        onClick={handleSignUp}
+        disabled={!cardValue}
+      >
         Sign up
       </button>
       <p className="font-bold text-center py-5">
