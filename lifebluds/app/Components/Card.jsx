@@ -18,8 +18,8 @@ const Card = () => {
           <div className={`bg-red-50 w-10 h-10 shadow-md relative bottom-8 left-[40%] ${activeCard === index ? 'border-2 border-red-800' : ''}`}>
             <img src={card.image} alt={card.title} className="w-full" />
           </div>
-          <h2 className="font-semibold text-center">{card.title}</h2>
-          <p className="text-center">{card.description}</p>
+          <h2 className="font-semibold text-center font-gilory pb-1 mt-0">{card.title}</h2>
+          <p className="text-center font-helvetica">{card.description}</p>
         </div>
       ))}
     </div>
