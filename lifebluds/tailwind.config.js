@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        gilory:['Gilory Medium', 'sans-serif'],
-        'gilory-bold':['Gilory Bold', 'sans-serif'],
+        gilory:['Gilroy Medium', 'sans-serif'],
+        'gilroy-bold':['Gilroy Bold', 'sans-serif'],
         helvetica:['Helvetica', 'sans-serif']
       },
       backgroundImage: {
