@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        gilory:['Gilroy Medium', 'sans-serif'],
+        'gilroy-bold':['Gilroy Bold', 'sans-serif'],
+        helvetica:['Helvetica', 'sans-serif']
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
