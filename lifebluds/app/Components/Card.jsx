@@ -5,10 +5,10 @@ import { Cards } from "./constant";
 import { useToggleBorder } from './Contex';
 
 const Card = () => {
-  const { activeCard, toggleCard, cardValue, updateCardValue} = useToggleBorder();
+  const { activeCard, toggleCard, updateCardValue} = useToggleBorder();
 
   return (
-    <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-2">
+    <div className="flex flex-col mx-4 my-[70px] lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-2">
       {Cards.map((card, index) => (
         <div 
           key={index} 

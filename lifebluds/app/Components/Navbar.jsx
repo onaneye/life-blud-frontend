@@ -47,9 +47,9 @@ const Navbar = () => {
           <ul className="flex flex-col justify-center">
             {NavList.map((nav, index) => (
               <li key={index} className="py-2 flex items-center">
-                <img src={nav.img} alt={nav.img} className="w-[40px]"/>
+                <img src={nav.img} alt={nav.img} className="w-[40px] text-red-400"/>
                 <Link href={nav.href}>
-                  <p className="text-xl text-red-800 ml-4">{nav.title}</p>
+                  <p className="text-xl text-black ml-4">{nav.title}</p>
                 </Link>
               </li>
               ))}

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HeroSection from '../Components/Hero';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
@@ -39,14 +39,25 @@ const Page = () => {
     console.log(formData);
   };
 
+  const [screenWidth, setScreenWidth] = useState(0);
+  useEffect(() => {
+    // Set the initial screen width on the client side
+    setScreenWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+  })
   return (
     <div className="lg:flex flex-col h-screen">
-      <main className="flex flex-grow justify-between flex-col-reverse lg:flex-row lg:h-full">
+      <main className="flex flex-grow justify-between flex-col-reverse md:flex-row lg:h-full">
         <div className="w-full lg:block my-auto py-[100px] px-5 lg:w-1/2">
           <h1 className="text-xl lg:text-2xl my-4 self-start font-gilroy-medium">Sign Up</h1>
           <form 
             onSubmit={handleSubmit}
-            className="px-4 py-1 w-full max-w-lg bg-white"
+            className="px-4 py-1 min-w-full lg:min-w-lg max-w-lg bg-white"
           >
             <div className="mb-4">
               <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
@@ -153,7 +164,9 @@ const Page = () => {
           </form>
         </div>
         {/* Hero section */}
-        <HeroSection />
+       
+      {screenWidth < 768 ? " ": <HeroSection />}
+      
       </main>
     </div>
   );
