@@ -29,3 +29,25 @@ export const Cards = [
         image: "/icons/icon-donor.png"
     }
 ]
+
+export const NavList = [
+    {
+        title: 'Login',
+        img: "/icons/download-icon.png",
+        href: "/login"
+
+    },
+    {
+        title: 'Sign up as a Medical Facility',
+        img:  "/icons/icon-health-facility.png",
+        href: "/blood-donor-registration"
+
+    },
+    {
+        title: 'Sign up as a Blood Donor',
+        img: "/icons/icon-donor.png",
+        href: "/medical-facility-registration"
+
+    }
+
+]
