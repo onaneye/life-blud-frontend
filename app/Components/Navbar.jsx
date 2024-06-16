@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between w-full px-4 items-center py-5 absolute text-white">
-      <img src="/logo.png" alt="Logo" width={100} height={50} />
+      <img src="/logo.png" alt="Logo" width={100} height={50}/>   
       {screenWidth <= 768 ? (
         <FontAwesomeIcon 
           icon={menuOpen ? faTimesCircle : faBars} 
@@ -40,7 +40,7 @@ const Navbar = () => {
           onClick={toggleMenu} 
         />
       ) : (
-        <button className="hidden lg:block button-primary-sm">Login</button>
+        <button className="hidden lg:block button-primary-sm ml-auto">Login</button>
       )}
       {menuOpen && (
         <div className="container absolute top-16  w-full bg-white mx-auto rounded-md p-4 lg:hidden">

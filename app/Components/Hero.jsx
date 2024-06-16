@@ -15,7 +15,7 @@ const HeroSection = () => {
   return (
     <>
       {showCardComponent ? (
-        <div className="flex items-center justify-center h-full lg:h-[fit-content] w-full lg:w-full py-10 lg:py-20 px-4 blur-background" style={{ backgroundImage: "url('../hero-img.png')", backgroundRepeat: 'no-repeat', backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="flex items-center justify-center h-full lg:h-[fit-content] w-full lg:w-full py-10 lg:py-20 px-4" style={{ backgroundImage: "url('../hero-img.png')", backgroundRepeat: 'no-repeat', backgroundSize: "cover", backgroundPosition: "center" }}>
           <div className="transparent-card bg-red-800 shadow-md bg-opacity-35 py-10 lg:py-8 px-4 text-white">
             <h6 className="text-3xl md:text-3xl lg:text-4xl font-bold leading-tight md:leading-snug lg:leading-tight font-gilroy-bold">
               Save Lives with a Single Donation
