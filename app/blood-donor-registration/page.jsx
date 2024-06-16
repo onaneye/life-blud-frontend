@@ -56,13 +56,13 @@ const Page = () => {
 
   return (
     <div className="lg:flex flex-col h-screen">
-      <main className="flex flex-grow justify-between flex-col-reverse lg:flex-row lg:h-full">
-        <div className="w-full lg:block my-auto py-[100px] px-5 lg:w-1/2">
+      <main className="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-x-4 lg:h-full">
+        <div className="w-full lg:block my-auto py-auto px-5 lg:w-lg">
           {isSubmitted ? (
             <VerifyEmailComponent />
           ) : (
             <>
-              <h1 className="text-xl lg:text-2xl my-4 self-start font-gilroy-medium">Sign Up</h1>
+              <h1 className="text-xl lg:text-2xl my-4  text-start ml-5 font-gilroy-medium">Sign Up</h1>
               <form 
                 onSubmit={handleSubmit}
                 className="px-4 py-1 min-w-full lg:min-w-lg max-w-lg bg-white"
