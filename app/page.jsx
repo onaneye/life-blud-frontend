@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <ToggleBorderProvider>
       <div className="lg:flex flex-col h-screen">
-        <Navbar />
         <main className="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-x-4 lg:h-full">
           {/* Sign up option component cards */}
           <div className="hidden w-full lg:block my-auto py-auto px-5 lg:w-full">
