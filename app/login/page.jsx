@@ -4,7 +4,7 @@ import HeroSection from '../Components/Hero'
 
 const page = () => {
   return (
-    <div className='flex justify-between items-center w-full'>
+    <div className='lg:flex justify-between items-center w-full'>
         <Logincomponent/>
         <HeroSection/>
     </div>
