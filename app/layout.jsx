@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import { ToggleBorderProvider } from "./Components/Contex";
 config.autoAddCss = false;
 
 
@@ -15,9 +16,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-      </body>
+      <ToggleBorderProvider>
+        <body className={inter.className}>
+          {children}
+        </body>
+      </ToggleBorderProvider>
+      
     </html>
   );
 }
